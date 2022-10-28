@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text.Json.Serialization;
 
 namespace Training_Project.Models
 {
     public partial class User
-    {
+    { 
         public int UserId { get; set; }
         public string Name { get; set; } = null!;
         public string MobileNo { get; set; } = null!;
@@ -16,7 +16,7 @@ namespace Training_Project.Models
         public string? ProfilePic { get; set; }
         public string Password { get; set; } = null!;
         public int? RoleId { get; set; }
-
+        [JsonIgnore]
         public virtual Role? Role { get; set; }
     }
 }

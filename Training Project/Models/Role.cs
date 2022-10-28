@@ -13,6 +13,7 @@ namespace Training_Project.Models
 
         public int RoleId { get; set; }
         public string RoleName { get; set; } = null!;
+
         [JsonIgnore]
         public virtual ICollection<User> Users { get; set; }
     }
